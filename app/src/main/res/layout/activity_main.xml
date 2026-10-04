@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guiaCentral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/imagen_superior"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etOperando1"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="54dp"
+            android:gravity="center"
+            android:hint="@string/operando1"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etOperando2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:hint="@string/operando2"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintTop_toBottomOf="@+id/etOperando1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/resultado"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/etOperando2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnSumar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/sumar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sumar_estados"
+            app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+            app:layout_constraintEnd_toStartOf="@+id/guiaCentral" />
+
+        <ImageButton
+            android:id="@+id/btnRestar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/restar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/restar_estados"
+            app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+            app:layout_constraintStart_toEndOf="@+id/guiaCentral" />
+
+        <ImageButton
+            android:id="@+id/btnDividir"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/dividir"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dividir_estados"
+            app:layout_constraintTop_toBottomOf="@+id/btnSumar"
+            app:layout_constraintEnd_toStartOf="@+id/guiaCentral" />
+
+        <ImageButton
+            android:id="@+id/btnMultiplicar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/multiplicar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/multiplicar_estados"
+            app:layout_constraintTop_toBottomOf="@+id/btnRestar"
+            app:layout_constraintStart_toStartOf="@+id/guiaCentral" />
+
+        <!-- Fase III -->
+        <Button
+            android:id="@+id/btnCambiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/cambiar"
+            app:layout_constraintTop_toBottomOf="@+id/btnMultiplicar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón Limpiar C -->
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/limpiar"
+            app:layout_constraintTop_toBottomOf="@+id/btnCambiar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

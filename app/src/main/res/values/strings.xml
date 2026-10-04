@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="logo">logo</string>
+    <string name="operando1">Operando 1</string>
+    <string name="operando2">Operando 2</string>
+    <string name="resultado">Resultado</string>
+    <string name="cambiar">Cambiar operadores</string>
+    <string name="sumar">+</string>
+    <string name="restar">-</string>
+    <string name="multiplicar">*</string>
+    <string name="dividir">/</string>
+    <string name="campos_vacios">Introduce ambos números</string>
+    <string name="numero_no_valido">Número no válido</string>
+    <string name="division_cero">No se puede dividir entre 0</string>
+
+    <string name="limpiar">C</string>
+</resources>
